@@ -1,0 +1,23 @@
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Backup files
+*.backup
+*.bak
+*.old
+.~lock*
+
+# Temporary files
+tmp/
+temp/
+*.log
