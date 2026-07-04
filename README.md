@@ -11,8 +11,8 @@ Built with **HTML5**, **CSS3**, and **vanilla JavaScript**, the project demonstr
 <a href="https://firdawsm.github.io/firdawsalnuur.github.io/">
 <img src="https://img.shields.io/badge/Live%20Website-Visit-success?style=for-the-badge&logo=githubpages"/>
 </a>
-<a href="https://github.com/FirdawsM/firdawsalnuur.github.io/blob/main/LICENSE" target="_blank">
-  <img src="https://img.shields.io/github/license/FirdawsM/firdawsalnuur.github.io?style=for-the-badge" alt="MIT License"/>
+<a href="LICENSE">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
 </a>
 
 </p>
