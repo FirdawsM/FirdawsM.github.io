@@ -8,7 +8,7 @@ Built with **HTML5**, **CSS3**, and **vanilla JavaScript**, the project demonstr
 
 <p>
 
-<a href="https://firdawsm.github.io/firdawsalnuur.github.io/">
+<a href="https://firdawsm.github.io/">
 <img src="https://img.shields.io/badge/Live%20Website-Visit-success?style=for-the-badge&logo=githubpages"/>
 </a>
 <a href="LICENSE">
@@ -176,7 +176,7 @@ Every push to the default branch automatically updates the live website.
 
 Live website:
 
-https://firdawsm.github.io/firdawsalnuur.github.io/
+https://firdawsm.github.io/
 
 ---
 
@@ -206,7 +206,7 @@ Suggestions, improvements, and feedback are always welcome.
 Software Engineer • Cybersecurity Engineer • AI Developer
 
 Portfolio
-https://firdawsm.github.io/firdawsalnuur.github.io/
+https://firdawsm.github.io/
 
 LinkedIn
 https://www.linkedin.com/in/firdaws-alnuur-b2788722a/
