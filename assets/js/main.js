@@ -30,30 +30,30 @@ themeBtn?.addEventListener("click", toggleTheme);
 themeBtnMobile?.addEventListener("click", toggleTheme);
 
 /* MOBILE SIDEBAR */
-const pageSidebar = document.getElementById("page-sidebar");
+const sidebar = document.getElementById("sidebar");
 const mobToggle = document.getElementById("mobToggle");
 mobToggle?.addEventListener("click", () => {
-  const isOpen = pageSidebar?.classList.toggle("mobile-menu-open");
+  const isOpen = sidebar.classList.toggle("mob-open");
   mobToggle.setAttribute("aria-expanded", String(isOpen));
   document.body.style.overflow = isOpen ? "hidden" : "";
 });
-document.querySelectorAll(".page-sidebar-link").forEach((link) => {
+document.querySelectorAll(".sb-link").forEach((link) => {
   link.addEventListener("click", () => {
-    pageSidebar?.classList.remove("mobile-menu-open");
+    sidebar.classList.remove("mob-open");
     mobToggle?.setAttribute("aria-expanded", "false");
     document.body.style.overflow = "";
   });
 });
 
 /* ACTIVE NAV */
-const sidebarLinks = document.querySelectorAll(".page-sidebar-link[data-section]");
+const sbLinks = document.querySelectorAll(".sb-link[data-section]");
 const sections = document.querySelectorAll("section[id], div[id]");
 const navObs = new IntersectionObserver(
   (entries) => {
     entries.forEach((e) => {
       if (!e.isIntersecting) return;
       const id = e.target.id;
-      sidebarLinks.forEach((l) => {
+      sbLinks.forEach((l) => {
         l.classList.toggle("active", l.dataset.section === id);
       });
     });
@@ -73,7 +73,7 @@ const revealObs = new IntersectionObserver(
   },
   { threshold: 0.08 },
 );
-document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
+document.querySelectorAll(".rv").forEach((el) => revealObs.observe(el));
 
 /* COUNTERS */
 function animCount(el) {
@@ -103,7 +103,7 @@ document
   .forEach((el) => counterObs.observe(el));
 
 /* ─────────────────────────────────────────
-   HERO PARALLAX — glow orbs + cyber map drift
+   HERO PARALLAX — subtle glow drift
    Only runs while the hero is on screen, and
    only on pointer-capable / non-reduced-motion
    devices.
@@ -115,13 +115,12 @@ document
   if (prefersReduced) return;
 
   const heroSection = document.getElementById("hero");
-  const cyberMap = document.getElementById("cyberMap");
-  const glowA = document.querySelector(".hero-glow-primary");
-  const glowB = document.querySelector(".hero-glow-secondary");
+  const glowA = document.querySelector(".hero-glow-a");
+  const glowB = document.querySelector(".hero-glow-b");
   if (!heroSection) return;
 
   let heroInView = true;
-  const heroObs = new IntersectionObserevealer(
+  const heroObs = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
         heroInView = e.isIntersecting;
@@ -129,7 +128,7 @@ document
     },
     { threshold: 0 },
   );
-  heroObs.obsereveale(heroSection);
+  heroObs.observe(heroSection);
 
   let ticking = false;
   function onScroll() {
@@ -137,10 +136,6 @@ document
     ticking = true;
     requestAnimationFrame(() => {
       const scrollY = window.scrollY || window.pageYOffset;
-      // Map drifts up slowly (depth: appears further back)
-      if (cyberMap) {
-        cyberMap.style.transform = `translateY(${scrollY * 0.12}px)`;
-      }
       // Glow orbs drift at different rates for parallax depth
       if (glowA) {
         glowA.style.transform = `translate3d(0, ${scrollY * 0.18}px, 0)`;
@@ -155,6 +150,104 @@ document
 })();
 
 /* ─────────────────────────────────────────
+   HERO NETWORK PARTICLES
+   Small points travel the existing network paths.
+   Animation pauses offscreen and respects reduced motion.
+   ───────────────────────────────────────── */
+(function () {
+  const hero = document.getElementById("hero");
+  const particles = [...document.querySelectorAll(".network-particle")];
+  const prefersReduced = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  if (!hero || !particles.length || prefersReduced) return;
+
+  const routes = [
+    [
+      [60, 140],
+      [120, 80],
+      [250, 60],
+      [340, 120],
+    ],
+    [
+      [120, 80],
+      [180, 160],
+      [290, 180],
+    ],
+  ];
+
+  function pointAlong(route, progress) {
+    const lengths = [];
+    let total = 0;
+    for (let i = 0; i < route.length - 1; i++) {
+      const dx = route[i + 1][0] - route[i][0];
+      const dy = route[i + 1][1] - route[i][1];
+      const length = Math.hypot(dx, dy);
+      lengths.push(length);
+      total += length;
+    }
+
+    let remaining = progress * total;
+    for (let i = 0; i < lengths.length; i++) {
+      if (remaining <= lengths[i] || i === lengths.length - 1) {
+        const t = lengths[i] ? remaining / lengths[i] : 0;
+        return [
+          route[i][0] + (route[i + 1][0] - route[i][0]) * t,
+          route[i][1] + (route[i + 1][1] - route[i][1]) * t,
+        ];
+      }
+      remaining -= lengths[i];
+    }
+    return route[0];
+  }
+
+  const movers = particles.map((node) => ({
+    node,
+    route: routes[Number(node.dataset.route) || 0],
+    duration: Number(node.dataset.duration) || 8000,
+    offset: Number(node.dataset.offset) || 0,
+  }));
+
+  let visible = false;
+  let frameId = 0;
+  let startAt = 0;
+  function tick(now) {
+    if (!visible || document.hidden) {
+      frameId = 0;
+      return;
+    }
+    if (!startAt) startAt = now;
+    const elapsed = now - startAt;
+    movers.forEach(({ node, route, duration, offset }) => {
+      const phase = ((elapsed / duration + offset) % 2 + 2) % 2;
+      const progress = phase <= 1 ? phase : 2 - phase;
+      const [x, y] = pointAlong(route, progress);
+      node.setAttribute("transform", `translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+    });
+    frameId = requestAnimationFrame(tick);
+  }
+
+  function updatePlayback() {
+    if (visible && !document.hidden && !frameId) {
+      frameId = requestAnimationFrame(tick);
+    } else if ((!visible || document.hidden) && frameId) {
+      cancelAnimationFrame(frameId);
+      frameId = 0;
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      visible = entry.isIntersecting;
+      updatePlayback();
+    },
+    { threshold: 0 },
+  );
+  observer.observe(hero);
+  document.addEventListener("visibilitychange", updatePlayback);
+})();
+
+/* ─────────────────────────────────────────
    PROJECT CARD TILT — subtle 3D mouse tilt
    Disabled on touch devices and reduced motion.
    ───────────────────────────────────────── */
@@ -166,7 +259,7 @@ document
   if (prefersReduced || isTouch) return;
 
   const MAX_TILT = 5; // degrees, kept subtle
-  const cards = document.querySelectorAll(".project-card, .info-card");
+  const cards = document.querySelectorAll(".proj-card, .about-card");
 
   cards.forEach((card) => {
     card.style.transition = "transform .15s ease-out";

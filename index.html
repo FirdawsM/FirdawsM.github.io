@@ -5,36 +5,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
             name="description"
-            content="Firdaws Alnuur — Cybersecurity Analyst. Hands-on labs in malware analysis, vulnerability management, SIEM, and threat detection."
+            content="Firdaws Alnuur Mohammed is a System Engineer and Informatics and Computer Science graduate focused on cybersecurity, VAPT, threat detection, and systems security."
         />
-        <meta name="author" content="Firdaws Alnuur" />
-        <title>Firdaws Alnuur — Cybersecurity Portfolio</title>
+        <meta name="author" content="Firdaws Alnuur Mohammed" />
+        <title>Firdaws Alnuur Mohammed — Cybersecurity &amp; Systems Engineering</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Geist+Mono:wght@300;400;500&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
-        />
         <link rel="stylesheet" href="assets/css/styles.css" />
     </head>
     <body>
         <canvas id="pc" aria-hidden="true"></canvas>
         <!-- ══ SIDEBAR ══ -->
-        <aside class="page-sidebar" id="page-sidebar">
-            <div class="page-sidebar-top">
-                <a href="#hero" class="page-sidebar-brand">
-                    <span class="page-sidebar-brand-mark">FA</span>
-                    <div class="page-sidebar-brand-text">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <a href="#hero" class="sb-logo">
+                    <span class="sb-logo-mark">FA</span>
+                    <div class="sb-logo-text">
                         <span>FIRDAWS</span>
                         <span>ALNUUR</span>
                     </div>
                 </a>
-                <nav class="sidebar-navigation">
-                    <a href="#hero" class="page-sidebar-link active" data-section="hero"
+                <nav class="sb-nav">
+                    <a href="#hero" class="sb-link active" data-section="hero"
                         ><svg
                             width="14"
                             height="14"
@@ -50,7 +46,7 @@
                         </svg>
                         HOME</a
                     >
-                    <a href="#about" class="page-sidebar-link" data-section="about"
+                    <a href="#about" class="sb-link" data-section="about"
                         ><svg
                             width="14"
                             height="14"
@@ -66,7 +62,7 @@
                         </svg>
                         ABOUT</a
                     >
-                    <a href="#projects" class="page-sidebar-link" data-section="projects"
+                    <a href="#projects" class="sb-link" data-section="projects"
                         ><svg
                             width="14"
                             height="14"
@@ -83,7 +79,7 @@
                     >
                     <a
                         href="#experience"
-                        class="page-sidebar-link"
+                        class="sb-link"
                         data-section="experience"
                         ><svg
                             width="14"
@@ -107,7 +103,11 @@
                         </svg>
                         EXPERIENCE</a
                     >
-                    <a href="#certs" class="page-sidebar-link" data-section="certs"
+                    <a href="#education" class="sb-link" data-section="education"
+                        ><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m2 10 10-5 10 5-10 5-10-5Z"/><path d="M6 12v5c3.5 2.5 8.5 2.5 12 0v-5M22 10v6"/></svg>
+                        EDUCATION</a
+                    >
+                    <a href="#certs" class="sb-link" data-section="certs"
                         ><svg
                             width="14"
                             height="14"
@@ -121,7 +121,7 @@
                         </svg>
                         CERTS</a
                     >
-                    <a href="#skills" class="page-sidebar-link" data-section="skills"
+                    <a href="#skills" class="sb-link" data-section="skills"
                         ><svg
                             width="14"
                             height="14"
@@ -135,7 +135,11 @@
                         </svg>
                         SKILLS</a
                     >
-                    <a href="#contact" class="page-sidebar-link" data-section="contact"
+                    <a href="#activities" class="sb-link" data-section="activities"
+                        ><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="5"/></svg>
+                        ACTIVITIES</a
+                    >
+                    <a href="#contact" class="sb-link" data-section="contact"
                         ><svg
                             width="14"
                             height="14"
@@ -153,34 +157,34 @@
                     >
                 </nav>
             </div>
-            <div class="page-sidebar-footer">
+            <div class="sidebar-bottom">
                 <button
                     id="themeBtn"
-                    class="theme-toggle-button"
+                    class="theme-toggle"
                     aria-label="Toggle light and dark theme"
                     type="button"
                 >
-                    <span id="themeIcon" class="theme-toggle-button-icon"
+                    <span id="themeIcon" class="theme-toggle-icon"
                         >&#9728;</span
                     >
-                    <span class="theme-toggle-button-text"
+                    <span class="theme-toggle-text"
                         >Switch to <span id="themeLabel">light</span></span
                     >
                 </button>
-                <div class="page-sidebar-status">
-                    <p class="page-sidebar-status-label">SYSTEM STATUS</p>
-                    <div class="page-sidebar-status-row">
-                        <span class="status-dot"></span> SECURE
+                <div class="sb-status">
+                    <p class="sb-status-label">SYSTEM STATUS</p>
+                    <div class="sb-status-row">
+                        <span class="sdot"></span> SECURE
                     </div>
-                    <div class="page-sidebar-status-meta">UPTIME 24/7</div>
+                    <div class="sb-status-meta">UPTIME 24/7</div>
                 </div>
-                <div class="page-sidebar-location">
-                    <p class="page-sidebar-status-label">LOCATION</p>
-                    <p class="page-sidebar-location-value">
+                <div class="sb-location">
+                    <p class="sb-status-label">LOCATION</p>
+                    <p class="sb-location-val">
                         Nairobi, Kenya &#127472;&#127466;
                     </p>
                 </div>
-                <div class="page-sidebar-socials">
+                <div class="sb-socials">
                     <a
                         href="https://github.com/FirdawsM"
                         target="_blank"
@@ -243,21 +247,21 @@
             </div>
         </aside>
         <!-- MOBILE TOP BAR -->
-        <header class="mobile-header" id="mobileBar">
-            <a href="#hero" class="page-sidebar-brand">
-                <span class="page-sidebar-brand-mark">FA</span>
+        <header class="mobile-bar" id="mobileBar">
+            <a href="#hero" class="sb-logo">
+                <span class="sb-logo-mark">FA</span>
             </a>
-            <div class="mobile-header-actions">
+            <div class="mobile-bar-right">
                 <button
                     id="themeBtnMobile"
-                    class="theme-toggle-button-mobile-button"
+                    class="theme-toggle-mobile"
                     aria-label="Toggle light and dark theme"
                     type="button"
                 >
                     <span id="themeIconMobile">&#9728;</span>
                 </button>
                 <button
-                    class="mobile-menu-toggle"
+                    class="mob-toggle"
                     id="mobToggle"
                     aria-label="Toggle menu"
                     aria-expanded="false"
@@ -270,44 +274,28 @@
         <main class="main-content">
             <!-- HERO -->
             <section id="hero" class="hero-section">
-                <div class="hero-glow hero-glow-primary" aria-hidden="true"></div>
-                <div class="hero-glow hero-glow-secondary" aria-hidden="true"></div>
+                <div class="hero-glow hero-glow-a" aria-hidden="true"></div>
+                <div class="hero-glow hero-glow-b" aria-hidden="true"></div>
                 <div class="hero-left">
-                    <div class="hero-badge reveal">
-                        <span class="status-dot"></span>
-                        CYBERSECURITY ANALYST
+                    <div class="hero-badge rv">
+                        <span class="sdot"></span> SYSTEM ENGINEER · CYBERSECURITY
                     </div>
-
-                    <div class="hero-open-roles reveal delay-60">
-                        <p class="hero-open-title">Open to roles in:</p>
-                        <ul class="hero-role-list">
-                            <li class="hero-role-chip">SOC Tier 1 / Monitoring</li>
-                            <li class="hero-role-chip">Helpdesk + Security</li>
-                            <li class="hero-role-chip">Network Support + Security</li>
-                            <li class="hero-role-chip">Cloud Support / Operations</li>
-                            <li class="hero-role-chip">IAM / Access Provisioning</li>
-                            <li class="hero-role-chip">Graduate Trainee Security Programs</li>
-                        </ul>
-                    </div>
-
-                    <div class="availability-badge reveal delay-40">
-                        <span class="open-dot"></span> Open to Work
-                    </div>
-                    <p class="hero-hi reveal delay-80">Hi, I'm</p>
-                    <h1 class="hero-name reveal delay-120">
+                    <p class="hero-hi rv" style="--d: 80ms">Hi, I'm</p>
+                    <h1 class="hero-name rv" style="--d: 120ms">
                         Firdaws Alnuur
                     </h1>
-                    <p class="hero-tagline reveal delay-180">
+                    <p class="hero-tagline rv" style="--d: 180ms">
                         Defending systems. Detecting threats.<br />Building
                         secure solutions.
                     </p>
-                    <p class="hero-desc reveal delay-220">
-                        Cybersecurity student and analyst passionate about
-                        threat detection, vulnerability management and security
-                        research. I build practical labs and tools that solve
-                        real-world security problems.
+                    <p class="hero-desc rv" style="--d: 220ms">
+                        Cybersecurity-focused Informatics and Computer Science
+                        graduate from Strathmore University, with hands-on work
+                        in threat detection, vulnerability assessment, systems
+                        security, and enterprise IT. I build machine learning
+                        detection solutions and conduct web security assessments.
                     </p>
-                    <div class="hero-actions reveal delay-280">
+                    <div class="hero-actions rv" style="--d: 280ms">
                         <a href="#projects" class="btn-primary"
                             >VIEW PROJECTS
                             <svg
@@ -342,18 +330,20 @@
                                 <line x1="12" y1="15" x2="12" y2="3" /></svg
                         ></a>
                     </div>
-                    <p class="hero-prompt reveal delay-340">
+                    <p class="hero-prompt rv" style="--d: 340ms">
                         <span class="prompt-arrow">&gt;_</span> Welcome to my
                         portfolio.exe
                     </p>
                 </div>
-                <div class="hero-right reveal delay-160">
-                    <div class="hero-map" id="cyberMap">
+                <div class="hero-right">
+                    <div class="cyber-map" id="cyberMap">
                         <svg
                             class="map-svg"
                             viewBox="0 0 400 260"
+                            preserveAspectRatio="none"
                             fill="none"
                             xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
                         >
                             <line
                                 x1="0"
@@ -516,6 +506,18 @@
                                 fill="var(--accent2)"
                                 opacity=".55"
                             />
+                            <g class="network-particle" data-route="0" data-duration="7600" data-offset="0" transform="translate(60 140)">
+                                <circle r="8" fill="var(--accent2)" opacity=".16" />
+                                <circle r="2.8" fill="#e7dfff" />
+                            </g>
+                            <g class="network-particle" data-route="0" data-duration="9200" data-offset=".38" transform="translate(250 60)">
+                                <circle r="7" fill="var(--accent)" opacity=".17" />
+                                <circle r="2.4" fill="#f1eaff" />
+                            </g>
+                            <g class="network-particle" data-route="1" data-duration="6800" data-offset=".63" transform="translate(180 160)">
+                                <circle r="7" fill="var(--accent2)" opacity=".16" />
+                                <circle r="2.4" fill="#e7dfff" />
+                            </g>
                             <!-- Shield icon -->
                             <g transform="translate(218,32)" opacity="0.55">
                                 <path
@@ -633,45 +635,45 @@
                                 />
                             </circle>
                         </svg>
-                        <div class="profile-terminal">
+                        <div class="whoami-terminal">
                             <div class="terminal-bar">
-                                <span class="terminal-dot terminal-dot-red"></span
-                                ><span class="terminal-dot terminal-dot-yellow"></span
-                                ><span class="terminal-dot terminal-dot-green"></span>
-                                <span class="terminal-title">&gt; whoami</span>
+                                <span class="t-dot td-r"></span
+                                ><span class="t-dot td-y"></span
+                                ><span class="t-dot td-g"></span>
+                                <span class="t-title">&gt; whoami</span>
                             </div>
-                            <div class="terminal-content">
-                                <div class="terminal-row">
-                                    <span class="terminal-key">Name</span
-                                    ><span class="terminal-separator">:</span
-                                    ><span class="terminal-value">Firdaws Alnuur</span>
+                            <div class="terminal-body">
+                                <div class="t-row">
+                                    <span class="t-key">Name</span
+                                    ><span class="t-sep">:</span
+                                    ><span class="t-val">Firdaws Alnuur Mohammed</span>
                                 </div>
-                                <div class="terminal-row">
-                                    <span class="terminal-key">Role</span
-                                    ><span class="terminal-separator">:</span
-                                    ><span class="terminal-value"
-                                        >Cybersecurity Analyst</span
+                                <div class="t-row">
+                                    <span class="t-key">Role</span
+                                    ><span class="t-sep">:</span
+                                    ><span class="t-val"
+                                        >System Engineer</span
                                     >
                                 </div>
-                                <div class="terminal-row">
-                                    <span class="terminal-key">Education</span
-                                    ><span class="terminal-separator">:</span
-                                    ><span class="terminal-value"
-                                        >Strathmore University</span
+                                <div class="t-row">
+                                    <span class="t-key">Education</span
+                                    ><span class="t-sep">:</span
+                                    ><span class="t-val"
+                                        >BSc Informatics &amp; Computer Science · Strathmore University</span
                                     >
                                 </div>
-                                <div class="terminal-row">
-                                    <span class="terminal-key">Focus</span
-                                    ><span class="terminal-separator">:</span
-                                    ><span class="terminal-value"
-                                        >Defensive Security</span
+                                <div class="t-row">
+                                    <span class="t-key">Focus</span
+                                    ><span class="t-sep">:</span
+                                    ><span class="t-val"
+                                        >VAPT · Threat Detection · Systems Security</span
                                     >
                                 </div>
-                                <div class="terminal-row">
-                                    <span class="terminal-key">Status</span
-                                    ><span class="terminal-separator">:</span
-                                    ><span class="terminal-value terminal-value-success"
-                                        >Open to Opportunities</span
+                                <div class="t-row">
+                                    <span class="t-key">Status</span
+                                    ><span class="t-sep">:</span
+                                    ><span class="t-val t-green"
+                                        >Currently Employed</span
                                     >
                                 </div>
                             </div>
@@ -680,37 +682,37 @@
                 </div>
             </section>
             <!-- STATS STRIP -->
-            <div class="stats-panel reveal">
-                <div class="stat-item">
-                    <span class="stat-number" data-count="3">0</span
+            <div class="stats-strip rv">
+                <div class="stat-block">
+                    <span class="stat-n" data-count="3">0</span
                     ><span class="stat-plus">+</span
-                    ><span class="stat-label">Internships</span>
+                    ><span class="stat-l">Internships</span>
                 </div>
                 <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="6">0</span
+                <div class="stat-block">
+                    <span class="stat-n" data-count="5">0</span
                     ><span class="stat-plus">+</span
-                    ><span class="stat-label">Major Projects</span>
+                    ><span class="stat-l">Major Projects</span>
                 </div>
                 <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="10">0</span
+                <div class="stat-block">
+                    <span class="stat-n" data-count="23">0</span
                     ><span class="stat-plus">+</span
-                    ><span class="stat-label">Security Tools</span>
+                    ><span class="stat-l">Security Tools</span>
                 </div>
                 <div class="stat-divider"></div>
-                <div class="stat-item">
-                    <span class="stat-number" data-count="1000">0</span
+                <div class="stat-block">
+                    <span class="stat-n" data-count="1000">0</span
                     ><span class="stat-plus">+</span
-                    ><span class="stat-label">AD Users Automated</span>
+                    ><span class="stat-l">AD Users Automated</span>
                 </div>
             </div>
             <!-- ABOUT -->
             <section id="about" class="about-section">
                 <div class="about-grid">
                     <!-- Core Focus -->
-                    <div class="info-card reveal">
-                        <p class="card-title">CORE FOCUS</p>
+                    <div class="about-card rv">
+                        <p class="card-label">CORE FOCUS</p>
                         <ul class="focus-list">
                             <li>
                                 <svg
@@ -807,17 +809,18 @@
                         </ul>
                     </div>
                     <!-- Tools -->
-                    <div class="info-card reveal delay-60">
-                        <p class="card-title">TOOLS I WORK WITH</p>
+                    <div class="about-card tools-card" style="--d: 60ms">
+                        <p class="card-label">TOOLS I WORK WITH</p>
                         <div class="tools-grid">
-                            <div class="tool-tag">
-                                <i
-                                    class="devicon-python-plain tool-icon"
-                                    aria-hidden="true"
-                                ></i>
+                            <div class="tool-chip">
+                                <span class="tool-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="m8 7-4 5 4 5M16 7l4 5-4 5M14 5l-4 14" />
+                                    </svg>
+                                </span>
                                 <span>Python</span>
                             </div>
-                            <div class="tool-tag">
+                            <div class="tool-chip">
                                 <span class="tool-icon">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -834,14 +837,15 @@
                                 </span>
                                 <span>Nessus</span>
                             </div>
-                            <div class="tool-tag">
-                                <i
-                                    class="devicon-wireshark-plain tool-icon"
-                                    aria-hidden="true"
-                                ></i>
+                            <div class="tool-chip">
+                                <span class="tool-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M3 12h3l2-5 4 10 3-7 2 2h4" />
+                                    </svg>
+                                </span>
                                 <span>Wireshark</span>
                             </div>
-                            <div class="tool-tag tool-tag-highlight">
+                            <div class="tool-chip tool-chip-accent">
                                 <span class="tool-icon">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -887,7 +891,7 @@
                                 </span>
                                 <span>Splunk</span>
                             </div>
-                            <div class="tool-tag">
+                            <div class="tool-chip">
                                 <span class="tool-icon">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -905,14 +909,16 @@
                                 </span>
                                 <span>Wazuh</span>
                             </div>
-                            <div class="tool-tag">
-                                <i
-                                    class="devicon-burpsuite-plain tool-icon"
-                                    aria-hidden="true"
-                                ></i>
+                            <div class="tool-chip">
+                                <span class="tool-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M12 3 5 6v5c0 4.6 2.9 7.8 7 10 4.1-2.2 7-5.4 7-10V6l-7-3Z" />
+                                        <path d="M9 10h5a2 2 0 0 1 0 4H9m0-4v7m0-7V8m0 6h5" />
+                                    </svg>
+                                </span>
                                 <span>Burp Suite</span>
                             </div>
-                            <div class="tool-tag">
+                            <div class="tool-chip">
                                 <span class="tool-icon">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -931,7 +937,7 @@
                                 </span>
                                 <span>OWASP ZAP</span>
                             </div>
-                            <div class="tool-tag">
+                            <div class="tool-chip">
                                 <span class="tool-icon">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -953,11 +959,11 @@
                         </div>
                     </div>
                     <!-- Cert quick list -->
-                    <div class="info-card reveal delay-120">
-                        <p class="card-title">CERTIFICATIONS</p>
-                        <ul class="certificate-summary-list">
+                    <div class="about-card rv" style="--d: 120ms">
+                        <p class="card-label">TRAINING &amp; COURSEWORK</p>
+                        <ul class="cert-quick-list">
                             <li>
-                                <span class="certificate-name">AWS ML Foundations</span
+                                <span class="cq-name">AWS ML Foundations</span
                                 ><svg
                                     width="13"
                                     height="13"
@@ -970,7 +976,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name"
+                                <span class="cq-name"
                                     >Cloud Security Foundations</span
                                 ><svg
                                     width="13"
@@ -984,8 +990,8 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name"
-                                    >ISC2 Certified in Cybersecurity</span
+                                <span class="cq-name"
+                                    >Machine Learning for Natural Language Processing</span
                                 ><svg
                                     width="13"
                                     height="13"
@@ -998,7 +1004,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name"
+                                <span class="cq-name"
                                     >CCNA: Switching, Routing &amp;
                                     Wireless</span
                                 ><svg
@@ -1013,7 +1019,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name"
+                                <span class="cq-name"
                                     >CCNA: Intro to Networks</span
                                 ><svg
                                     width="13"
@@ -1027,7 +1033,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name">Network Defense</span
+                                <span class="cq-name">Network Defense</span
                                 ><svg
                                     width="13"
                                     height="13"
@@ -1040,7 +1046,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name"
+                                <span class="cq-name"
                                     >Intro to Cybersecurity</span
                                 ><svg
                                     width="13"
@@ -1054,7 +1060,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name"
+                                <span class="cq-name"
                                     >Python Essentials 1 &amp; 2</span
                                 ><svg
                                     width="13"
@@ -1068,7 +1074,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name">DevNet Associate</span
+                                <span class="cq-name">DevNet Associate</span
                                 ><svg
                                     width="13"
                                     height="13"
@@ -1081,7 +1087,7 @@
                                 </svg>
                             </li>
                             <li>
-                                <span class="certificate-name">CompTIA Security+</span
+                                <span class="cq-name">Introduction to MLSecOps</span
                                 ><svg
                                     width="13"
                                     height="13"
@@ -1094,25 +1100,25 @@
                                 </svg>
                             </li>
                         </ul>
-                        <a href="#certs" class="info-link">View all certs →</a>
+                        <a href="#certs" class="card-link">View all certs →</a>
                     </div>
                 </div>
             </section>
             <!-- PROJECTS -->
             <section id="projects" class="projects-section">
-                <div class="section-header reveal">
+                <div class="section-header rv">
                     <p class="section-eyebrow">&gt;_ FEATURED PROJECTS</p>
                     <a
                         href="https://github.com/FirdawsM"
-                        class="section-action"
+                        class="section-link"
                         target="_blank"
                         rel="noopener"
                         >View All Projects →</a
                     >
                 </div>
                 <div class="projects-grid">
-                    <div class="project-card reveal delay-0">
-                        <div class="project-card-icon">
+                    <div class="proj-card rv" style="--d: 0ms">
+                        <div class="proj-card-icon">
                             <svg
                                 viewBox="0 0 64 64"
                                 fill="none"
@@ -1221,28 +1227,28 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="project-card-title">
+                        <h3 class="proj-card-name">
                             Active Directory &amp; Windows Lab
                         </h3>
-                        <p class="project-card-description">
-                            Built an enterprise-style AD lab with Windows Serevealer
+                        <p class="proj-card-desc">
+                            Built an enterprise-style AD lab with Windows Server
                             2019, DNS, DHCP, NAT and PowerShell automation.
                             Provisioned 1,000+ domain users.
                         </p>
-                        <div class="project-card-tags">
+                        <div class="proj-card-tags">
                             <span>PowerShell</span><span>AD DS</span
-                            ><span>Windows Serevealer</span>
+                            ><span>Windows Server</span>
                         </div>
                         <a
                             href="https://github.com/FirdawsM/Active-Directory-"
-                            class="project-info-link"
+                            class="proj-card-link"
                             target="_blank"
                             rel="noopener"
                             >View Project →</a
                         >
                     </div>
-                    <div class="project-card reveal delay-60">
-                        <div class="project-card-icon">
+                    <div class="proj-card rv" style="--d: 60ms">
+                        <div class="proj-card-icon">
                             <svg
                                 viewBox="0 0 64 64"
                                 fill="none"
@@ -1341,28 +1347,29 @@
                                 </text>
                             </svg>
                         </div>
-                        <h3 class="project-card-title">
-                            Malware Analysis Framework
+                        <h3 class="proj-card-name">
+                            Malware Research Lab: Keylogging &amp; Detection
                         </h3>
-                        <p class="project-card-description">
-                            Python-based malware detection using YARA rules and
-                            threat intelligence for IOC extraction. Analyzed C#
-                            keylogger behavior and AV evasion techniques.
+                        <p class="proj-card-desc">
+                            Analyzed a custom C# keylogger in a controlled lab,
+                            examining keystroke capture, log storage, and SMTP
+                            exfiltration. Compared signature and behavior-based
+                            antivirus detection using VirusTotal.
                         </p>
-                        <div class="project-card-tags">
-                            <span>Python</span><span>YARA</span
-                            ><span>Threat Intel</span>
+                        <div class="proj-card-tags">
+                            <span>C#</span><span>.NET</span
+                            ><span>Windows Internals</span>
                         </div>
                         <a
                             href="https://github.com/FirdawsM/Malware-Analysis-Sandbox"
-                            class="project-info-link"
+                            class="proj-card-link"
                             target="_blank"
                             rel="noopener"
                             >View Project →</a
                         >
                     </div>
-                    <div class="project-card reveal delay-120">
-                        <div class="project-card-icon">
+                    <div class="proj-card rv" style="--d: 120ms">
+                        <div class="proj-card-icon">
                             <svg
                                 viewBox="0 0 64 64"
                                 fill="none"
@@ -1447,28 +1454,29 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="project-card-title">
-                            Phishing Detection System
+                        <h3 class="proj-card-name">
+                            Phishing URL Classifier
                         </h3>
-                        <p class="project-card-description">
-                            ML-powered phishing URL detection using Random
-                            Forest and threat intelligence APIs. Achieved 85.2%
-                            accuracy on 10,000 URL dataset.
+                        <p class="proj-card-desc">
+                            Built a Random Forest classifier trained on 10,000
+                            URLs, reaching 85.2% detection accuracy. Enriched
+                            detections with threat intelligence and reduced
+                            false positives through feature engineering.
                         </p>
-                        <div class="project-card-tags">
+                        <div class="proj-card-tags">
                             <span>Python</span><span>ML</span
                             ><span>Random Forest</span>
                         </div>
                         <a
                             href="https://github.com/FirdawsM/Phishing-URL-Detector"
-                            class="project-info-link"
+                            class="proj-card-link"
                             target="_blank"
                             rel="noopener"
                             >View Project →</a
                         >
                     </div>
-                    <div class="project-card reveal delay-180">
-                        <div class="project-card-icon">
+                    <div class="proj-card rv" style="--d: 180ms">
+                        <div class="proj-card-icon">
                             <svg
                                 viewBox="0 0 64 64"
                                 fill="none"
@@ -1527,29 +1535,29 @@
                                 />
                             </svg>
                         </div>
-                        <h3 class="project-card-title">
+                        <h3 class="proj-card-name">
                             Vulnerability Management Lab
                         </h3>
-                        <p class="project-card-description">
-                            Implemented vulnerability scans using Nessus
-                            Essentials with credentialed and uncredentialed
-                            scanning, CVE prioritisation and remediation
-                            re-verification.
+                        <p class="proj-card-desc">
+                            Ran credentialed vulnerability scans, prioritized
+                            remediation by risk, verified fixes, and reduced
+                            the attack surface by removing deprecated software
+                            and applying security patches.
                         </p>
-                        <div class="project-card-tags">
+                        <div class="proj-card-tags">
                             <span>Nessus</span><span>Windows 10</span
                             ><span>VMware</span>
                         </div>
                         <a
                             href="https://github.com/FirdawsM/Vulnerability-Assessment-of-DVWA"
-                            class="project-info-link"
+                            class="proj-card-link"
                             target="_blank"
                             rel="noopener"
                             >View Project →</a
                         >
                     </div>
-                    <div class="project-card reveal delay-240">
-                        <div class="project-card-icon">
+                    <div class="proj-card rv" style="--d: 240ms">
+                        <div class="proj-card-icon">
                             <svg
                                 viewBox="0 0 64 64"
                                 fill="none"
@@ -1623,205 +1631,115 @@
                                 </text>
                             </svg>
                         </div>
-                        <h3 class="project-card-title">ARP Poisoning — IR Lab</h3>
-                        <p class="project-card-description">
+                        <h3 class="proj-card-name">ARP Poisoning — IR Lab</h3>
+                        <p class="proj-card-desc">
                             Simulated ARP poisoning incident with full incident
                             response workflow — network traffic analysis, attack
                             vector identification and mitigation documentation.
                         </p>
-                        <div class="project-card-tags">
+                        <div class="proj-card-tags">
                             <span>Wireshark</span><span>Incident Response</span
                             ><span>ARP</span>
                         </div>
                         <a
                             href="https://github.com/FirdawsM/ARP-Poisoning-Attack-report-"
-                            class="project-info-link"
+                            class="proj-card-link"
                             target="_blank"
                             rel="noopener"
                             >View Project →</a
                         >
                     </div>
-                    <div class="project-card reveal delay-300">
-                        <div class="project-card-icon">
-                            <svg
-                                viewBox="0 0 64 64"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="52"
-                                height="52"
-                            >
-                                <rect
-                                    x="14"
-                                    y="26"
-                                    width="36"
-                                    height="26"
-                                    rx="3"
-                                    stroke="var(--accent)"
-                                    stroke-width="1.5"
-                                />
-                                <path
-                                    d="M21 26 V20 a11 11 0 0 1 22 0 V26"
-                                    stroke="var(--accent)"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                />
-                                <circle
-                                    cx="32"
-                                    cy="39"
-                                    r="4"
-                                    stroke="var(--accent2)"
-                                    stroke-width="1.5"
-                                />
-                                <line
-                                    x1="32"
-                                    y1="43"
-                                    x2="32"
-                                    y2="47"
-                                    stroke="var(--accent2)"
-                                    stroke-width="1.5"
-                                    stroke-linecap="round"
-                                />
-                                <rect
-                                    x="18"
-                                    y="30"
-                                    width="5"
-                                    height="4"
-                                    rx="1"
-                                    fill="var(--accent)"
-                                    opacity=".6"
-                                />
-                                <rect
-                                    x="25"
-                                    y="30"
-                                    width="5"
-                                    height="4"
-                                    rx="1"
-                                    fill="var(--accent)"
-                                    opacity=".8"
-                                />
-                                <rect
-                                    x="32"
-                                    y="30"
-                                    width="5"
-                                    height="4"
-                                    rx="1"
-                                    fill="var(--accent2)"
-                                    opacity=".9"
-                                />
-                                <rect
-                                    x="39"
-                                    y="30"
-                                    width="5"
-                                    height="4"
-                                    rx="1"
-                                    fill="var(--accent)"
-                                    opacity=".5"
-                                />
-                            </svg>
-                        </div>
-                        <h3 class="project-card-title">
-                            Password Strength Analyzer
-                        </h3>
-                        <p class="project-card-description">
-                            Security tool evaluating password entropy,
-                            complexity and credential vulnerability. Actionable
-                            feedback for IAM and authentication security
-                            workflows.
-                        </p>
-                        <div class="project-card-tags">
-                            <span>Python</span><span>IAM</span
-                            ><span>Security Tools</span>
-                        </div>
-                        <a
-                            href="https://github.com/FirdawsM/Password-Strength-Analyzer"
-                            class="project-info-link"
-                            target="_blank"
-                            rel="noopener"
-                            >View Project →</a
-                        >
-                    </div>
+
                 </div>
             </section>
             <!-- EXPERIENCE + CERTS -->
-            <section id="experience" class="experience-certifications-section">
-                <div class="experience-certifications-grid">
-                    <div class="experience-column">
-                        <p class="section-eyebrow reveal">EXPERIENCE TIMELINE</p>
-                        <div class="timeline reveal delay-60">
-                            <div class="timeline-item">
-                                <div class="timeline-metadata">
-                                    <p class="timeline-date">May 2025 – Jun 2025</p>
-                                    <p class="timeline-role">CyberSecurity Intern</p>
-                                    <p class="timeline-company">
+            <section id="experience" class="exp-certs-section">
+                <div class="exp-certs-grid">
+                    <div class="exp-col">
+                        <p class="section-eyebrow rv">PROFESSIONAL EXPERIENCE</p>
+                        <div class="timeline rv" style="--d: 60ms">
+                            <div class="tl-item">
+                                <div class="tl-left">
+                                    <p class="tl-date">Aug 2026 – Present</p>
+                                    <p class="tl-role">System Engineer</p>
+                                    <p class="tl-co">Cloudlogic Limited · Nairobi, Kenya</p>
+                                </div>
+                                <div class="tl-track">
+                                    <div class="tl-dot"></div>
+                                    <div class="tl-line"></div>
+                                </div>
+                                <div class="tl-right">
+                                    <ul class="tl-bullets">
+                                        <li>Conduct VAPT across web applications, networks, and IT systems.</li>
+                                        <li>Perform systems and security audits covering configurations, access controls, and data protection.</li>
+                                        <li>Configure and review FortiGate and Sophos firewalls; document findings and risk-based remediation.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tl-item">
+                                <div class="tl-left">
+                                    <p class="tl-date">May 2025 – Jun 2025</p>
+                                    <p class="tl-role">Cybersecurity Intern</p>
+                                    <p class="tl-co">
                                         Brainwave Matrix Solutions · Remote
                                     </p>
                                 </div>
-                                <div class="timeline-track">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-line"></div>
+                                <div class="tl-track">
+                                    <div class="tl-dot"></div>
+                                    <div class="tl-line"></div>
                                 </div>
-                                <div class="timeline-details">
-                                    <ul class="timeline-bullets">
+                                <div class="tl-right">
+                                    <ul class="tl-bullets">
                                         <li>
-                                            Built Python-based security tooling
-                                            using YARA rules for malware pattern
-                                            detection
+                                            Engineered a Python/YARA malware detection framework to identify indicators of compromise and reduce manual analyst triage.
                                         </li>
                                         <li>
-                                            Trained a Random Forest phishing
-                                            classifier on 10,000 URLs, achieving
-                                            85.2% accuracy
+                                            Built a Random Forest phishing URL classifier trained on 10,000 URLs, achieving 85.2% detection accuracy.
                                         </li>
                                         <li>
-                                            Integrated threat intelligence APIs
-                                            to improve detection reliability
+                                            Integrated threat intelligence feeds and improved alert fidelity through feature engineering and model validation.
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-metadata">
-                                    <p class="timeline-date">Feb 2025 – Apr 2025</p>
-                                    <p class="timeline-role">IT Analyst Intern</p>
-                                    <p class="timeline-company">Vivacom Ltd</p>
+                            <div class="tl-item">
+                                <div class="tl-left">
+                                    <p class="tl-date">Feb 2025 – Apr 2025</p>
+                                    <p class="tl-role">IT Analyst Intern</p>
+                                    <p class="tl-co">Vivacom Ltd</p>
                                 </div>
-                                <div class="timeline-track">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-line"></div>
+                                <div class="tl-track">
+                                    <div class="tl-dot"></div>
+                                    <div class="tl-line"></div>
                                 </div>
-                                <div class="timeline-details">
-                                    <ul class="timeline-bullets">
+                                <div class="tl-right">
+                                    <ul class="tl-bullets">
                                         <li>
-                                            Conducted web app vulnerability
-                                            assessments with OWASP ZAP &amp;
-                                            Burp Suite
+                                            Assessed web application vulnerabilities with OWASP ZAP and Burp Suite, including OWASP Top 10 risks.
                                         </li>
                                         <li>
-                                            Analysed security incidents via
-                                            Splunk, Wazuh, and Wireshark
+                                            Investigated incidents with Splunk and Wazuh, correlating logs for root cause analysis and incident reporting.
                                         </li>
                                         <li>
-                                            Assisted in network security audits
-                                            and firewall implementation
+                                            Contributed to network security audits and firewall rule reviews against internal security policies.
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-metadata">
-                                    <p class="timeline-date">Jan 2025 – Feb 2025</p>
-                                    <p class="timeline-role">Cyber Security Intern</p>
-                                    <p class="timeline-company">Future Interns · Remote</p>
+                            <div class="tl-item">
+                                <div class="tl-left">
+                                    <p class="tl-date">Jan 2025 – Feb 2025</p>
+                                    <p class="tl-role">Cyber Security Intern</p>
+                                    <p class="tl-co">Future Interns · Remote</p>
                                 </div>
-                                <div class="timeline-track">
-                                    <div class="timeline-dot"></div>
-                                    <div class="timeline-line"></div>
+                                <div class="tl-track">
+                                    <div class="tl-dot"></div>
+                                    <div class="tl-line"></div>
                                 </div>
-                                <div class="timeline-details">
-                                    <ul class="timeline-bullets">
+                                <div class="tl-right">
+                                    <ul class="tl-bullets">
                                         <li>
-                                            Supported incident management and
-                                            threat detection workflows
+                                            Supported incident management, threat detection, initial triage, and investigation in a remote SOC environment.
                                         </li>
                                         <li>
                                             Applied SOC principles and
@@ -1834,24 +1752,25 @@
                         </div>
                         <a
                             href="assets/resume.pdf"
-                            class="button-outline-small reveal delay-200"
+                            class="btn-outline-sm rv"
+                            style="--d: 200ms"
                             target="_blank"
                             rel="noopener"
                             >View Full Experience →</a
                         >
                     </div>
-                    <div id="certs" class="certifications-column">
-                        <p class="section-eyebrow reveal">
-                            CERTIFICATIONS &amp; LEARNING
+                    <div id="certs" class="certs-col">
+                        <p class="section-eyebrow rv">
+                            TRAINING &amp; COURSEWORK
                         </p>
-                        <div class="certification-list reveal" style="--d: 60ms">
+                        <div class="certs-full rv" style="--d: 60ms">
                             <a
                                 href="https://www.credly.com/badges/5e62a338-d1bb-4e87-b0b4-fe1b1fb82f3a/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 40 22"
                                         width="36"
@@ -1875,7 +1794,7 @@
                                     </p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -1888,11 +1807,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/03e789f3-b026-4d40-967a-903ba11e7a85/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 40 22"
                                         width="36"
@@ -1918,7 +1837,7 @@
                                     </p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -1931,11 +1850,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/0d59fd1b-07ff-4af4-b931-64b7b75427eb/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 44 22"
                                         width="40"
@@ -1959,7 +1878,7 @@
                                     </p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -1972,11 +1891,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/c90ed630-cd55-4983-a4b4-54374398b817/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 44 22"
                                         width="40"
@@ -2002,7 +1921,7 @@
                                     </p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -2015,11 +1934,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/605b2b51-62b8-4cdc-83f0-8ad9fe88d773/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 44 22"
                                         width="40"
@@ -2043,7 +1962,7 @@
                                     <p class="cfi-src">Cisco · 2022</p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -2056,11 +1975,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/46a6386a-713f-4e4d-951e-405312397f40/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 44 22"
                                         width="40"
@@ -2082,7 +2001,7 @@
                                     <p class="cfi-src">Cisco · 2022</p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -2095,11 +2014,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/dceb750d-b3e8-423e-82ee-4156c45fe916/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 44 22"
                                         width="40"
@@ -2123,7 +2042,7 @@
                                     <p class="cfi-src">Cisco · 2023</p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -2136,11 +2055,11 @@
                             </a>
                             <a
                                 href="https://www.credly.com/badges/2524db30-0e25-4110-a648-06ec3401b7b1/public_url"
-                                class="certification-row"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 44 22"
                                         width="40"
@@ -2166,7 +2085,7 @@
                                     </p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -2178,12 +2097,12 @@
                                 </svg>
                             </a>
                             <a
-                                href="assets/isc2-cc.jpg"
-                                class="certification-row"
+                                href="assets/certifications/AWS_Academy_Graduate___Machine_Learning_for_Natural_Language_Processing___Training_Badge_Badge20260831-20-2gs8cj.pdf"
+                                class="cert-full-row"
                                 target="_blank"
                                 rel="noopener"
                             >
-                                <div class="certification-icon">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 40 22"
                                         width="36"
@@ -2194,20 +2113,20 @@
                                             font-family="Arial,sans-serif"
                                             font-size="13"
                                             font-weight="900"
-                                            fill="#006747"
+                                            fill="#7c4dff"
                                         >
-                                            ISC²
+                                            AWS
                                         </text>
                                     </svg>
                                 </div>
                                 <div>
                                     <p class="cfi-name">
-                                        Certified in Cybersecurity (CC)
+                                        Machine Learning for Natural Language Processing
                                     </p>
-                                    <p class="cfi-src">ISC2 · 2025</p>
+                                    <p class="cfi-src">AWS Academy · Aug 2026</p>
                                 </div>
                                 <svg
-                                    class="certification-arrow"
+                                    class="cert-arrow"
                                     width="14"
                                     height="14"
                                     viewBox="0 0 24 24"
@@ -2218,8 +2137,8 @@
                                     <polyline points="9 18 15 12 9 6" />
                                 </svg>
                             </a>
-                            <div class="certification-row certification-progress-row">
-                                <div class="certification-icon">
+                            <div class="cert-full-row">
+                                <div class="cert-full-icon">
                                     <svg
                                         viewBox="0 0 56 22"
                                         width="50"
@@ -2230,22 +2149,22 @@
                                             font-family="Arial,sans-serif"
                                             font-size="9"
                                             font-weight="900"
-                                            fill="#c8102e"
+                                            fill="#6b4bbf"
                                         >
-                                            CompTIA
+                                            LinkedIn Learning
                                         </text>
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="cfi-name">CompTIA Security+</p>
-                                    <p class="cfi-src">In Progress · 2026</p>
+                                    <p class="cfi-name">Introduction to MLSecOps</p>
+                                    <p class="cfi-src">LinkedIn Learning · Sep 2026</p>
                                 </div>
-                                <span class="certification-status">studying</span>
                             </div>
                         </div>
                         <a
                             href="https://www.credly.com/go/QbutnPNw"
-                            class="button-outline-small reveal delay-200"
+                            class="btn-outline-sm rv"
+                            style="--d: 200ms"
                             target="_blank"
                             rel="noopener"
                             >View All Activities →</a
@@ -2253,45 +2172,98 @@
                     </div>
                 </div>
             </section>
+            <!-- EDUCATION -->
+            <section id="education" class="education-section">
+                <div class="section-header rv">
+                    <p class="section-eyebrow">EDUCATION &amp; TRAINING</p>
+                </div>
+                <div class="education-grid">
+                    <article class="education-card rv">
+                        <p class="education-date">Graduated August 2026</p>
+                        <h2>BSc Informatics &amp; Computer Science</h2>
+                        <p class="education-school">Strathmore University · Nairobi, Kenya</p>
+                        <p class="education-copy">Coursework: Computer Security &amp; Cryptography, Computer Networks, Operating Systems, Database Systems, Artificial Intelligence, Distributed Systems, and IT &amp; Security Design.</p>
+                    </article>
+                    <article class="education-card rv" style="--d: 80ms">
+                        <p class="education-date">2026 – 2027 · Remote</p>
+                        <h2>Cybersecurity Training Program</h2>
+                        <p class="education-school">International Cybersecurity &amp; Digital Forensics Academy (ICDFA)</p>
+                        <p class="education-copy">Network Defense, AWS Cloud Security Engineering, Python Essentials 1 &amp; 2, AWS Machine Learning &amp; Threat Detection, and Identity and Access Management.</p>
+                    </article>
+                </div>
+            </section>
+            <!-- ACTIVITIES -->
+            <section id="activities" class="activities-section education-section">
+                <div class="section-header rv">
+                    <p class="section-eyebrow">ACTIVITIES</p>
+                </div>
+                <div class="education-grid">
+                    <article class="education-card rv">
+                        <p class="education-date">January 2026 · Forage</p>
+                        <h2>Mastercard Cybersecurity Virtual Experience</h2>
+                        <p class="education-copy">Worked through a Security Awareness Team simulation: identified business units with security training gaps and designed targeted training procedures.</p>
+                    </article>
+                    <article class="education-card rv" style="--d: 80ms">
+                        <p class="education-date">Strathmore University</p>
+                        <h2>Cybersecurity Club · Member</h2>
+                        <p class="education-copy">Participate in CTFs, bootcamps, cybersecurity awareness programs, and peer-led workshops.</p>
+                    </article>
+                </div>
+            </section>
             <!-- SKILLS -->
             <section id="skills" class="skills-section">
-                <div class="section-header reveal">
+                <div class="section-header rv">
                     <p class="section-eyebrow">&gt;_ SKILLS &amp; TOOLS</p>
                 </div>
-                    <div class="skills-grid reveal delay-60">
-                    <div class="skills-column">
-                        <p class="skills-column-title">// Security Tools</p>
-                        <div class="skills-pill-list">
-                            <span>Nessus</span><span>Splunk</span
-                            ><span>Wazuh</span><span>Wireshark</span
-                            ><span>OWASP ZAP</span><span>Burp Suite</span
-                            ><span>Nmap</span><span>YARA</span>
+                <div class="skills-cols rv" style="--d: 60ms">
+                    <div class="skill-col">
+                        <p class="skill-col-label">// Security Tools</p>
+                        <div class="skill-pills">
+                            <span>Nessus Essentials</span><span>OWASP ZAP</span
+                            ><span>Burp Suite</span><span>Wazuh</span
+                            ><span>Splunk</span><span>Wireshark</span
+                            ><span>Nmap</span><span>Active Directory</span
+                            ><span>Snort</span><span>Gobuster</span
+                            ><span>Nikto</span><span>tcpdump</span
+                            ><span>Metasploit</span><span>BloodHound</span
+                            ><span>Hydra</span><span>Microsoft Sentinel</span
+                            ><span>Suricata</span><span>Autopsy</span
+                            ><span>TheHive</span><span>Shodan</span
+                            ><span>OpenSSL</span>
                         </div>
                     </div>
-                    <div class="skills-column">
-                        <p class="skills-column-title">// Languages</p>
-                        <div class="skills-pill-list">
-                            <span>Python</span><span>PowerShell</span
-                            ><span>C#</span><span>JavaScript</span
-                            ><span>Bash</span>
+                    <div class="skill-col">
+                        <p class="skill-col-label">// Languages</p>
+                        <div class="skill-pills">
+                            <span>Python</span><span>YARA</span
+                            ><span>scikit-learn</span><span>C#</span
+                            ><span>JavaScript</span><span>PHP</span
+                            ><span>C++</span><span>Node.js</span
+                            ><span>PowerShell</span><span>React Native</span>
                         </div>
                     </div>
-                    <div class="skills-column">
-                        <p class="skills-column-title">// Platforms</p>
-                        <div class="skills-pill-list">
-                            <span>Windows Serevealer</span><span>Linux</span
-                            ><span>VMware</span><span>VirtualBox</span
-                            ><span>Active Directory</span><span>AWS</span>
+                    <div class="skill-col">
+                        <p class="skill-col-label">// Platforms</p>
+                        <div class="skill-pills">
+                            <span>Linux</span><span>Windows Server</span
+                            ><span>Windows</span><span>AWS</span
+                            ><span>VirtualBox</span><span>VMware Workstation</span>
                         </div>
                     </div>
-                    <div class="skills-column">
-                        <p class="skills-column-title">// Domains</p>
-                        <div class="skills-pill-list">
-                            <span>Threat Detection</span
-                            ><span>Vuln Management</span
+                    <div class="skill-col">
+                        <p class="skill-col-label">// Domains</p>
+                        <div class="skill-pills">
+                            <span>Vulnerability Assessment</span
+                            ><span>Penetration Testing</span
                             ><span>Incident Response</span
-                            ><span>Malware Analysis</span><span>IAM</span
-                            ><span>SIEM</span><span>Network Defense</span>
+                            ><span>Threat Detection</span><span>Log Analysis</span
+                            ><span>SIEM</span><span>SOC Operations</span
+                            ><span>IAM</span><span>GRC</span
+                            ><span>PCI-DSS</span><span>NIST CSF</span
+                            ><span>ISO 27001</span><span>OWASP Top 10</span
+                            ><span>Patch Management</span
+                            ><span>Endpoint Security</span
+                            ><span>Business Email Compromise</span>
                         </div>
                     </div>
                 </div>
@@ -2299,23 +2271,25 @@
             <!-- CONTACT -->
             <section id="contact" class="contact-section">
                 <div class="contact-grid">
-                    <div class="contact-copy reveal">
+                    <div class="contact-left rv">
                         <p class="section-eyebrow">LET'S CONNECT</p>
                         <h2 class="contact-heading">
                             Ready to contribute<br />to a secure future.
                         </h2>
                         <p class="contact-sub">
-                            I'm actively looking for cybersecurity opportunities
-                            where I can apply my skills and keep learning.
+                            I work across vulnerability assessment, security
+                            audits, firewall review, threat detection, and
+                            incident response. Get in touch to connect.
                         </p>
                         <a
                             href="mailto:firdawsalnuur4@gmail.com"
-                            class="btn-primary btn-inline"
+                            class="btn-primary"
+                            style="margin-top: 1.75rem; display: inline-flex"
                             >GET IN TOUCH →</a
                         >
                     </div>
-                    <div class="contact-info-panel reveal" style="--d: 80ms">
-                        <div class="contact-info-item">
+                    <div class="contact-mid rv" style="--d: 80ms">
+                        <div class="contact-info-row">
                             <svg
                                 width="16"
                                 height="16"
@@ -2330,15 +2304,15 @@
                                 <polyline points="22,6 12,13 2,6" />
                             </svg>
                             <div>
-                                <p class="contact-info-label">EMAIL</p>
+                                <p class="ci-label">EMAIL</p>
                                 <a
                                     href="mailto:firdawsalnuur4@gmail.com"
-                                    class="contact-info-value"
+                                    class="ci-val"
                                     >firdawsalnuur4@gmail.com</a
                                 >
                             </div>
                         </div>
-                        <div class="contact-info-item">
+                        <div class="contact-info-row">
                             <svg
                                 width="16"
                                 height="16"
@@ -2353,11 +2327,11 @@
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
                             <div>
-                                <p class="contact-info-label">LOCATION</p>
-                                <p class="contact-info-value">Nairobi, Kenya</p>
+                                <p class="ci-label">LOCATION</p>
+                                <p class="ci-val">Nairobi, Kenya</p>
                             </div>
                         </div>
-                        <div class="contact-info-item">
+                        <div class="contact-info-row">
                             <svg
                                 width="16"
                                 height="16"
@@ -2373,10 +2347,10 @@
                                 <circle cx="4" cy="4" r="2" />
                             </svg>
                             <div>
-                                <p class="contact-info-label">LINKEDIN</p>
+                                <p class="ci-label">LINKEDIN</p>
                                 <a
                                     href="https://linkedin.com/in/firdaws-alnuur-b2788722a"
-                                    class="contact-info-value"
+                                    class="ci-val"
                                     target="_blank"
                                     rel="noopener"
                                     >linkedin.com/in/firdaws-alnuur</a
@@ -2384,35 +2358,35 @@
                             </div>
                         </div>
                     </div>
-                    <div class="contact-terminal-panel reveal" style="--d: 140ms">
+                    <div class="contact-terminal rv" style="--d: 140ms">
                         <div class="terminal-bar">
-                            <span class="terminal-dot terminal-dot-red"></span
-                            ><span class="terminal-dot terminal-dot-yellow"></span
-                            ><span class="terminal-dot terminal-dot-green"></span>
-                            <span class="terminal-title">&gt; contact.log</span>
+                            <span class="t-dot td-r"></span
+                            ><span class="t-dot td-y"></span
+                            ><span class="t-dot td-g"></span>
+                            <span class="t-title">&gt; contact.log</span>
                         </div>
-                        <div class="terminal-content">
-                            <p class="terminal-comment">
+                        <div class="terminal-body">
+                            <p class="t-comment">
                                 // If you have an opportunity,
                             </p>
-                            <p class="terminal-comment">
+                            <p class="t-comment">
                                 // a project, or just want to
                             </p>
-                            <p class="terminal-comment">
+                            <p class="t-comment">
                                 // connect, feel free to reach out.
                             </p>
-                            <p class="terminal-comment">
+                            <p class="t-comment">
                                 // Let's build secure systems
                             </p>
-                            <p class="terminal-comment">// together.</p>
-                            <p class="terminal-cursor">
+                            <p class="t-comment">// together.</p>
+                            <p class="t-cursor">
                                 &gt;_ <span class="blink">█</span>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="contact-footer reveal delay-200">
-                    <p>© 2026 Firdaws Alnuur. All rights reserevealed.</p>
+                <div class="contact-footer rv" style="--d: 200ms">
+                    <p>© 2026 Firdaws Alnuur Mohammed. All rights reserved.</p>
                     <p>
                         Built with passion for cybersecurity
                         <svg
